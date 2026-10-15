@@ -425,9 +425,8 @@ export default function App() {
           
           <h2 id="contact-heading">Contact Us</h2>
           <p className="contact-email">
-            or email us at{' '}
-            <a href="mailto:fairfax.investing.group@gmail.com">
-              fairfax.investing.group@gmail.com
+            <a href="mailto:info@fairfaxinvestinggroup.com">
+              info@fairfaxinvestinggroup.com
             </a>
           </p>
           
