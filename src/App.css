@@ -724,6 +724,7 @@ body::after {
 
 .graph-drawer {
     --handle-width: clamp(18px, 1.35cqw, 26px);
+    --graph-inset: clamp(5px, .5cqw, 10px);
     position: absolute;
     z-index: 8;
     top: 13%;
@@ -743,8 +744,8 @@ body::after {
 .graph-drawer-frame {
     box-sizing: border-box;
     width: calc(100% - var(--handle-width));
-    padding: clamp(5px, .5cqw, 10px);
-    border: clamp(5px, .5cqw, 10px) solid #0b2f4f;
+    padding: var(--graph-inset);
+    border: var(--graph-inset) solid #0b2f4f;
     background: #f7f5ef;
     overflow: hidden;
 }
@@ -1046,6 +1047,7 @@ body::after {
 .brokerage-statements-menu.is-open {
     max-height: 400px;
     margin-top: 1.5rem;
+    overflow-y: auto;
 
     opacity: 1;
 
@@ -1144,9 +1146,10 @@ body::after {
     }
 
     .graph-drawer {
+        --graph-length: min(102.5vw, 450px);
         top: 13%;
         left: 0;
-        width: min(calc(41.5vw + var(--handle-width) + 26px), calc(208px + var(--handle-width)));
+        width: calc(var(--graph-length) * 387.83989501312334 / 959.5380577427821 + 4 * var(--graph-inset) + var(--handle-width));
         clip-path: none;
         rotate: 0deg;
         transform-origin: center;
@@ -1155,14 +1158,14 @@ body::after {
 
     .graph-drawer-frame {
         position: relative;
-        height: min(calc(102.5vw + 26px), 476px);
+        height: calc(var(--graph-length) + 4 * var(--graph-inset));
     }
 
     .graph-drawer-frame img {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: min(102.5vw, 450px);
+        width: var(--graph-length);
         height: auto;
         max-width: none;
         transform: translate(-50%, -50%) rotate(90deg);

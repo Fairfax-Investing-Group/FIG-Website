@@ -25,6 +25,8 @@ const TeamDeck = lazy(() =>
 )
 const TITLE_LINES = ['FAIRFAX', 'INVESTING', 'GROUP']
 const STATEMENTS = [
+  ['2026-09.pdf', '9/30/26'],
+  ['2026-08.pdf', '8/31/26'],
   ['2026-07.pdf', '7/31/26'],
   ['2026-06.pdf', '6/30/26'],
   ['2026-05.pdf', '5/31/26'],
@@ -36,7 +38,6 @@ const STATEMENTS = [
 const NAV_LINKS = [
   ['portal', 'https://www.myiclub.com/club/public/fairfaxinvestinggroup'],
   ['dashboard', 'https://docs.google.com/spreadsheets/d/15dNTf3uMPupanATPo7H9leXFXuRyI_O7v_Coev_tOaU/edit?gid=0#gid=0'],
-  ['reports', 'https://medium.com/@fairfax.investing.group'],
 ] as const
 const CANVAS_GL = {
   alpha: true,
