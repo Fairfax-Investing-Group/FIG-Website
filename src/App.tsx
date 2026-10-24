@@ -36,8 +36,7 @@ const STATEMENTS = [
   ['2026-01.pdf', '1/31/26'],
 ] as const
 const NAV_LINKS = [
-  ['portal', 'https://www.myiclub.com/club/public/fairfaxinvestinggroup'],
-  ['dashboard', 'https://docs.google.com/spreadsheets/d/15dNTf3uMPupanATPo7H9leXFXuRyI_O7v_Coev_tOaU/edit?gid=0#gid=0'],
+  ['dashboard', 'https://research.fairfaxinvestinggroup.com'],
 ] as const
 const CANVAS_GL = {
   alpha: true,
