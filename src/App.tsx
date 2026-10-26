@@ -55,7 +55,6 @@ function Title({ inverted = false }: { inverted?: boolean }) {
 export default function App() {
   const [state, handleSubmit] = useForm("mljrgvwr")
   const [statementsOpen, setStatementsOpen] = useState(false)
-  const [graphOpen, setGraphOpen] = useState(false)
   const [secondScreenVisible, setSecondScreenVisible] = useState(false)
   const [peekProgress, setPeekProgress] = useState(0)
   const [aboutPageReady, setAboutPageReady] = useState(false)
@@ -206,24 +205,6 @@ export default function App() {
       <section className="hero-page">
         <main className="main">
           <div className="top-disc" aria-hidden="true" />
-          <aside className={`graph-drawer${graphOpen ? ' is-open' : ''}`}>
-            <div className="graph-drawer-frame">
-              <img src={`${BASE_URL}images/graph-return.svg`} alt="Portfolio return graph" />
-            </div>
-            <button
-              type="button"
-              className="graph-drawer-handle"
-              onClick={() => setGraphOpen((open) => !open)}
-              aria-expanded={graphOpen}
-              aria-label={`${graphOpen ? 'Close' : 'Open'} portfolio return graph`}
-            >
-              <span className="graph-drawer-handle-lines" aria-hidden="true">
-                <span />
-                <span />
-              </span>
-            </button>
-          </aside>
-
           <div className={`brokerage-statements${statementsOpen ? ' is-open' : ''}`}>
             <button
               type="button"
@@ -328,7 +309,7 @@ export default function App() {
         </main>
       </section>
     ),
-[aboutPageReady, graphOpen, showAboutPage, statementsOpen],
+[aboutPageReady, showAboutPage, statementsOpen],
 )
 
   return (
